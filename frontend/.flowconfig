@@ -1,0 +1,28 @@
+[ignore]
+.*/build/.*
+.*/test/*
+.*/node_modules/jss/lib/.*\.js\.flow
+
+[include]
+.*/node_modules/material-ui/**/.*\.js\.flow
+
+[libs]
+node_modules/material-ui/**/.*\.js\.flow
+flow
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.export_star_as=enable
+esproposal.decorators=ignore
+
+unsafe.enable_getters_and_setters=true
+module.name_mapper='^\(.*\)$' -> '<PROJECT_ROOT>/app/\1'
+module.name_mapper='.*\.scss$' -> '<PROJECT_ROOT>/app/service/flow/CSSModule.js'
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+suppress_comment= \\(.\\|\n\\)*\\$FlowExpectedError
+suppress_type=$FlowToDo
+
+[version]
+0.56.0
